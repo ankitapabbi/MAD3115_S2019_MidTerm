@@ -12,7 +12,7 @@
 		7EF733F622D7F4E700261E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF733F422D7F4E700261E6C /* Main.storyboard */; };
 		7EF733F822D7F4E800261E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF733F722D7F4E800261E6C /* Assets.xcassets */; };
 		7EF733FB22D7F4E800261E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF733F922D7F4E800261E6C /* LaunchScreen.storyboard */; };
-		7EF7340522D7FFB400261E6C /* UsersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7340422D7FFB400261E6C /* UsersList.plist */; };
+		7EF7340B22D803A600261E6C /* UsersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7340A22D803A600261E6C /* UsersList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		7EF733F722D7F4E800261E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EF733FA22D7F4E800261E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EF733FC22D7F4E800261E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EF7340422D7FFB400261E6C /* UsersList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UsersList.plist; sourceTree = "<group>"; };
+		7EF7340A22D803A600261E6C /* UsersList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UsersList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				7EF733F722D7F4E800261E6C /* Assets.xcassets */,
 				7EF733F922D7F4E800261E6C /* LaunchScreen.storyboard */,
 				7EF733FC22D7F4E800261E6C /* Info.plist */,
-				7EF7340422D7FFB400261E6C /* UsersList.plist */,
+				7EF7340A22D803A600261E6C /* UsersList.plist */,
 			);
 			path = C0751145_MidTerm_MAD3115S2019;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 				7EF733FB22D7F4E800261E6C /* LaunchScreen.storyboard in Resources */,
 				7EF733F822D7F4E800261E6C /* Assets.xcassets in Resources */,
 				7EF733F622D7F4E700261E6C /* Main.storyboard in Resources */,
-				7EF7340522D7FFB400261E6C /* UsersList.plist in Resources */,
+				7EF7340B22D803A600261E6C /* UsersList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
