@@ -10,6 +10,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var txtUserEmail: UITextField!
+    
+    @IBOutlet weak var txtUserPassword: UITextField!
+  
+    @IBOutlet weak var switchRememberMe: UISwitch!
+    @IBAction func btnLogin(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
        
