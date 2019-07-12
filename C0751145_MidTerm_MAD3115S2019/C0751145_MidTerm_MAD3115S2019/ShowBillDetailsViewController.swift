@@ -26,9 +26,10 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
     @IBOutlet weak var tblBills: UITableView!
     
  
-    @IBAction func btnBack(_ sender: Any) {
-        
+    @IBAction func btnBackToCustomerList(_ sender: Any) {
+       
     }
+    
     @IBAction func btnAddNewBill(_ sender: Any) {
     }
     override func viewDidLoad() {
@@ -66,6 +67,5 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         // Pass the selected object to the new view controller.
     }
     */
-
     
 }
