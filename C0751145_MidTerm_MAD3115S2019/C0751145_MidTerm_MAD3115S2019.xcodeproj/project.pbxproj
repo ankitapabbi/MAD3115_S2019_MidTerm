@@ -16,6 +16,7 @@
 		7ED3394922D90DD100DD59C7 /* BillLayoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394822D90DD100DD59C7 /* BillLayoutTableViewCell.swift */; };
 		7ED3394B22D922FE00DD59C7 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394A22D922FE00DD59C7 /* AddNewBillViewController.swift */; };
 		7ED3394E22D9464100DD59C7 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394D22D9464100DD59C7 /* Dollar.swift */; };
+		7ED3395022D9486800DD59C7 /* CheckEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394F22D9486800DD59C7 /* CheckEmail.swift */; };
 		7EF733F122D7F4E700261E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF733F022D7F4E700261E6C /* AppDelegate.swift */; };
 		7EF733F322D7F4E700261E6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF733F222D7F4E700261E6C /* LoginViewController.swift */; };
 		7EF733F622D7F4E700261E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF733F422D7F4E700261E6C /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		7ED3394822D90DD100DD59C7 /* BillLayoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillLayoutTableViewCell.swift; sourceTree = "<group>"; };
 		7ED3394A22D922FE00DD59C7 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 		7ED3394D22D9464100DD59C7 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
+		7ED3394F22D9486800DD59C7 /* CheckEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmail.swift; sourceTree = "<group>"; };
 		7EF733ED22D7F4E700261E6C /* C0751145_MidTerm_MAD3115S2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0751145_MidTerm_MAD3115S2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF733F022D7F4E700261E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EF733F222D7F4E700261E6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED3394D22D9464100DD59C7 /* Dollar.swift */,
+				7ED3394F22D9486800DD59C7 /* CheckEmail.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				7ED3393F22D8EF8E00DD59C7 /* Customer.swift in Sources */,
 				7EF733F322D7F4E700261E6C /* LoginViewController.swift in Sources */,
 				7ED3394322D8EFAB00DD59C7 /* Internet.swift in Sources */,
+				7ED3395022D9486800DD59C7 /* CheckEmail.swift in Sources */,
 				7EF7340F22D8207A00261E6C /* BillListTableViewController.swift in Sources */,
 				7ED3394122D8EF9900DD59C7 /* Hydro.swift in Sources */,
 				7EF733F122D7F4E700261E6C /* AppDelegate.swift in Sources */,
