@@ -39,11 +39,15 @@ class LoginViewController: UIViewController {
                             {
                                 userDefault.setValue(self.txtUserEmail.text, forKey: "userEmail")
                                 userDefault.set(self.txtUserPassword.text, forKey: "userPassword")
+                               
+                                
+                                
                             }
                             else
                             {
                                 userDefault.removeObject(forKey: "userEmail")
                                 userDefault.removeObject(forKey: "userPassword")
+                                
                             }
                             self.performSegue(withIdentifier: "userProfile", sender: nil)
                             loggedIn = true

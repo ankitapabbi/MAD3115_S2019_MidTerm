@@ -42,6 +42,7 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         
         self.tblBills.delegate = self
         self.tblBills.dataSource = self
+        self.tblBills.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -51,12 +52,23 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "billCell") as! UITableViewCell
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "billCell") as! BillLayoutTableViewCell
+        let cust = Customer.existig_Customer.bill_Dictionary[indexPath.row]
         
-      cell.textLabel?.text = Customer.existig_Customer.bill_Dictionary[indexPath.row]?.bill_type
+        cell.lblBillType.text = "Bill Type : \(cust!.bill_type)"
+        cell.lblBillAmount.text = "Ammount : \(cust!.bill_total)"
+        
+        
+        
+        
+//        let  cell = tableView.dequeueReusableCell(withIdentifier: "billCell") as! UITableViewCell
+//
+//      cell.textLabel?.text = Customer.existig_Customer.bill_Dictionary[indexPath.row]?.bill_type
+        
        
         return cell
     }
+    
 
     /*
     // MARK: - Navigation
@@ -67,5 +79,6 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         // Pass the selected object to the new view controller.
     }
     */
+    
     
 }

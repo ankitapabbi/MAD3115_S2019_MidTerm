@@ -34,6 +34,8 @@ class AddNewBillViewController: UIViewController {
             var bill = Hydro.init(bill_id: 4, bill_date: Date(), bill_type: "Hydrp", totalBillAmount: 90.66, a_name: self.txtName.text ?? "abc", u_consume: unit!)
             Customer.existig_Customer.bill_Dictionary[6] = bill
             
+            
+            
         }else if self.segmentBillType.selectedSegmentIndex == 1{
              print("internet")
             var unit = Int(self.txtUnits.text ?? "0")
