@@ -31,9 +31,15 @@ class AddNewBillViewController: UIViewController {
         if self.segmentBillType.selectedSegmentIndex == 0{
             print("hydro")
             var unit = Int(self.txtUnits.text ?? "0")
-            Hydro.init(bill_id: 4, bill_date: Date(), bill_type: "Hydrp", totalBillAmount: 90.66, a_name: self.txtName.text ?? "abc", u_consume: unit!)
+            var bill = Hydro.init(bill_id: 4, bill_date: Date(), bill_type: "Hydrp", totalBillAmount: 90.66, a_name: self.txtName.text ?? "abc", u_consume: unit!)
+            Customer.existig_Customer.bill_Dictionary[6] = bill
+            
         }else if self.segmentBillType.selectedSegmentIndex == 1{
              print("internet")
+            var unit = Int(self.txtUnits.text ?? "0")
+            var bill = Internet(bill_id: 4, bill_date: Date(), bill_type: "InterNet", totalBillAmount: 29.0, p_name: self.txtName.text ?? "abc", i_gb_used: Float(unit!))
+            Customer.existig_Customer.bill_Dictionary[7] = bill
+            
         }
         else if self.segmentBillType.selectedSegmentIndex == 2{
              print("Mobile")

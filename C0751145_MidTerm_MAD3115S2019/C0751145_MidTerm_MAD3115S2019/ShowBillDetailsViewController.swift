@@ -54,7 +54,7 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         let  cell = tableView.dequeueReusableCell(withIdentifier: "billCell") as! UITableViewCell
         
       cell.textLabel?.text = Customer.existig_Customer.bill_Dictionary[indexPath.row]?.bill_type
-      
+       
         return cell
     }
 
