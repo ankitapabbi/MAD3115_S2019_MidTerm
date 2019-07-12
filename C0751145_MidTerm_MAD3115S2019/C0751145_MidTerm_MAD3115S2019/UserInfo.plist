@@ -7,24 +7,24 @@
             <dict>
                 <key>userId</key>
                 <integer>1</integer>
-                <key>userName</key>
-                <string>Ankita</string>
+                <key>userEmail</key>
+                <string>Ankita@gmail.com</string>
                 <key>password</key>
                 <string>anku123</string>
             </dict>
             <dict>
                 <key>userId</key>
                 <integer>2</integer>
-                <key>userName</key>
-                <string>Vishal</string>
+                <key>userEmail</key>
+                <string>Vishal@gmail.com</string>
                 <key>password</key>
                 <string>vishal123</string>
             </dict>
             <dict>
                 <key>userId</key>
                 <integer>3</integer>
-                <key>userName</key>
-                <string>Diksha</string>
+                <key>userEmail</key>
+                <string>Diksha@gmail.com</string>
                 <key>password</key>
                 <string>diksha123</string>
             </dict>

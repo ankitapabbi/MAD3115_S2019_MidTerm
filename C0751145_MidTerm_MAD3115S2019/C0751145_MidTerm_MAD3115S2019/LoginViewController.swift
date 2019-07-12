@@ -16,6 +16,29 @@ class LoginViewController: UIViewController {
   
     @IBOutlet weak var switchRememberMe: UISwitch!
     @IBAction func btnLogin(_ sender: UIButton) {
+        
+        var email = self.txtUserEmail.text!
+        var password = self.txtUserPassword.text!
+        
+        let pList = Bundle.main.path(forResource: "UsersList", ofType: "plist")
+        if let dict = NSDictionary(contentsOfFile: pList!)
+        {
+             if let users = dict["Users"] as? [[String:Any]] {
+                for user in users {
+                    let userEmail = user["userEmail"] as! String
+                    let userPassword = user["userPassword"] as! String
+                    
+                    if email == userEmail as! String  {
+                        
+                        if password == userPassword as String{
+                            
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
