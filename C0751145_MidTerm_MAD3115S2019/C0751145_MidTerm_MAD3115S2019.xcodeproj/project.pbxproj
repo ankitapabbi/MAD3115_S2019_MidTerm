@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7ED3393D22D8EF8200DD59C7 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3393C22D8EF8200DD59C7 /* Bill.swift */; };
+		7ED3393F22D8EF8E00DD59C7 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3393E22D8EF8E00DD59C7 /* Customer.swift */; };
+		7ED3394122D8EF9900DD59C7 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394022D8EF9900DD59C7 /* Hydro.swift */; };
+		7ED3394322D8EFAB00DD59C7 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394222D8EFAB00DD59C7 /* Internet.swift */; };
+		7ED3394522D8EFB400DD59C7 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3394422D8EFB400DD59C7 /* Mobile.swift */; };
 		7EF733F122D7F4E700261E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF733F022D7F4E700261E6C /* AppDelegate.swift */; };
 		7EF733F322D7F4E700261E6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF733F222D7F4E700261E6C /* LoginViewController.swift */; };
 		7EF733F622D7F4E700261E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF733F422D7F4E700261E6C /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7ED3393C22D8EF8200DD59C7 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		7ED3393E22D8EF8E00DD59C7 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		7ED3394022D8EF9900DD59C7 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		7ED3394222D8EFAB00DD59C7 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		7ED3394422D8EFB400DD59C7 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		7EF733ED22D7F4E700261E6C /* C0751145_MidTerm_MAD3115S2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0751145_MidTerm_MAD3115S2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF733F022D7F4E700261E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EF733F222D7F4E700261E6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7ED3393B22D8EDC500DD59C7 /* RequiredSwiftClasses */ = {
+			isa = PBXGroup;
+			children = (
+				7ED3393C22D8EF8200DD59C7 /* Bill.swift */,
+				7ED3393E22D8EF8E00DD59C7 /* Customer.swift */,
+				7ED3394022D8EF9900DD59C7 /* Hydro.swift */,
+				7ED3394222D8EFAB00DD59C7 /* Internet.swift */,
+				7ED3394422D8EFB400DD59C7 /* Mobile.swift */,
+			);
+			path = RequiredSwiftClasses;
+			sourceTree = "<group>";
+		};
 		7EF733E422D7F4E700261E6C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +80,7 @@
 		7EF733EF22D7F4E700261E6C /* C0751145_MidTerm_MAD3115S2019 */ = {
 			isa = PBXGroup;
 			children = (
+				7ED3393B22D8EDC500DD59C7 /* RequiredSwiftClasses */,
 				7EF733F022D7F4E700261E6C /* AppDelegate.swift */,
 				7EF733F222D7F4E700261E6C /* LoginViewController.swift */,
 				7EF733F422D7F4E700261E6C /* Main.storyboard */,
@@ -142,9 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED3393D22D8EF8200DD59C7 /* Bill.swift in Sources */,
+				7ED3393F22D8EF8E00DD59C7 /* Customer.swift in Sources */,
 				7EF733F322D7F4E700261E6C /* LoginViewController.swift in Sources */,
+				7ED3394322D8EFAB00DD59C7 /* Internet.swift in Sources */,
 				7EF7340F22D8207A00261E6C /* BillListTableViewController.swift in Sources */,
+				7ED3394122D8EF9900DD59C7 /* Hydro.swift in Sources */,
 				7EF733F122D7F4E700261E6C /* AppDelegate.swift in Sources */,
+				7ED3394522D8EFB400DD59C7 /* Mobile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
