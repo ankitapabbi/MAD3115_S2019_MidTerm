@@ -56,10 +56,18 @@ class BillListTableViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: "customerCell") as! UITableViewCell
         cell.textLabel?.text = self.customer_array[indexPath.row].fullName
+        // click action on perticular customer name using tap gesture
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapToGoOnCustomerDetail(_:)))
+        cell.tag = indexPath.row
+        cell.addGestureRecognizer(tapGesture)
         
         return cell
     }
-    
+
+    @objc func tapToGoOnCustomerDetail(_ sender: UITapGestureRecognizer) {
+        print(sender.view!.tag)// to display index 
+       
+    }
     
 
     /*

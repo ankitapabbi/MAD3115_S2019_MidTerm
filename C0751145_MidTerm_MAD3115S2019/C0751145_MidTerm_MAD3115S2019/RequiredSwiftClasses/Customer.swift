@@ -9,7 +9,7 @@
 import Foundation
 class Customer
 {
-    static var activeCustomer = Customer()
+    static var existig_Customer = Customer()
     var customerId : Int
     var firstName : String
     var lastName: String
