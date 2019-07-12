@@ -55,7 +55,7 @@ class BillListTableViewController: UIViewController,UITableViewDelegate,UITableV
         customer_4.bill_Dictionary[2] = bill_2
        
         
-        var customer_5 =  Customer(customerId: 4, firstName: "Netra", lastName: "Sharma", email: "anetra@gmail.com",ph_num: "6453458834")
+        var customer_5 =  Customer(customerId: 4, firstName: "Lavish", lastName: "Khullar", email: "lavi@gmail.com",ph_num: "6663458834")
         customer_5.bill_Dictionary[0] = bill_6
         customer_5.bill_Dictionary[1] = bill_7
         customer_5.bill_Dictionary[2] = bill_2
