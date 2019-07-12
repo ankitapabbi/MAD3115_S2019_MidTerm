@@ -94,6 +94,21 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
+        <!--Bill List Table View Controller-->
+        <scene sceneID="1Rx-XT-Y8o">
+            <objects>
+                <viewController storyboardIdentifier="userProfile" id="xgt-5d-bzj" customClass="BillListTableViewController" customModule="C0751145_MidTerm_MAD3115S2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ra1-Ma-3dZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cm8-SQ-7bT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAP-BD-Zmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="21"/>
+        </scene>
     </scenes>
     <resources>
         <image name="loginLogo" width="64" height="64"/>

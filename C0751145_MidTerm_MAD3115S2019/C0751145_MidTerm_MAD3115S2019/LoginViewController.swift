@@ -9,6 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    var loggedIn = false
 
     @IBOutlet weak var txtUserEmail: UITextField!
     
@@ -20,34 +22,41 @@ class LoginViewController: UIViewController {
         var email = self.txtUserEmail.text!
         var password = self.txtUserPassword.text!
         
-        let pList = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
-        if let dict = NSDictionary(contentsOfFile: pList!)
+        if let plist = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
         {
-             if let users = dict["Users"] as? [[String:Any]] {
-                for user in users {
-//                    let userEmail = user["userEmail"] as! String
-//                    let userPassword = user["userPassword"] as! String
-                    
-                    if email ==  user["userEmail"] as! String {
-                        if password == user["userPassword"] as! String{
+            if let dict = NSDictionary(contentsOfFile: plist)
+            {
+                if let users = dict["Users"] as? [[String:Any]]
+                {
+                    for user in users
+                    {
+                        if ( (email == (user["userEmail"] as! String)) && (password == (user["password"] as! String)) ){
                             
+                           print("Hello")
+                            
+                            let sb = UIStoryboard(name: "Main", bundle: nil)
+                            let profile = sb.instantiateViewController(withIdentifier: "userProfile") as! BillListTableViewController
+                            self.navigationController?.pushViewController(profile,animated: true)
+                            loggedIn = true
+                           
                         }
-                        
                     }
-                    else{
-                        let alert = UIAlertController(title: "Error", message: "User Email / Password Incorrect", preferredStyle: UIAlertController.Style.alert)
-                        
-                        let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-                        let actionCanel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
-                        alert.addAction(actionOk)
-                        alert.addAction(actionCanel)
-                        self .present(alert, animated: true ,completion: nil)
-                    }
-                    
                 }
-             }
+            }
+        }
+        if !loggedIn{
+            
+                let alert = UIAlertController(title: "Error", message: "User Email / Password Incorrect", preferredStyle: UIAlertController.Style.alert)
+                
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                let actionCanel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+                alert.addAction(actionOk)
+                alert.addAction(actionCanel)
+                self .present(alert, animated: true ,completion: nil)
             
         }
+        
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
