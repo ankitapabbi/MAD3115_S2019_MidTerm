@@ -10,7 +10,7 @@ import Foundation
 class Customer
 {
     static var activeCustomer = Customer()
-    var customerId : String
+    var customerId : Int
     var firstName : String
     var lastName: String
     
@@ -20,31 +20,34 @@ class Customer
         return "\(self.firstName) \(self.lastName)"
     }
     var email: String
+    var phone: String
     
-    var billDictionary = [Int:Bill]()
+    var bill_Dictionary = [Int:Bill]()
     
     // computed value
     var TotalAmountToPay: Float
     {
         var TotalAmount: Float = 0.0
         
-        for bill in billDictionary
+        for bill in bill_Dictionary
         {
             TotalAmount = TotalAmount + bill.value.bill_total
         }
         return TotalAmount
     }
     init(){
-        self.customerId = String()
+        self.customerId = Int()
         self.firstName = String()
         self.lastName = String()
         self.email = String()
+        self.phone = String()
     }
-    init(customerId: String, firstName: String, lastName: String, email: String)
+    init(customerId: Int, firstName: String, lastName: String, email: String,ph_num: String)
     {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+        self.phone = ph_num
     }
 }

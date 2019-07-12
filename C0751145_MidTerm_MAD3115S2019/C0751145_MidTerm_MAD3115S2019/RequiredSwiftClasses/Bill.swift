@@ -39,5 +39,6 @@ class Bill {
         self.bill_id = Int()
         self.bill_date = Date()
         self.bill_type = String()
+        self.bill_total = Float()
     }
 }

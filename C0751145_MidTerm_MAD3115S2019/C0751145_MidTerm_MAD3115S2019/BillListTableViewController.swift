@@ -10,12 +10,31 @@ import UIKit
 
 class BillListTableViewController: UIViewController {
 
-    @IBAction func btnLogout(_ sender: Any) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
+        var bill_1  = Mobile(bill_id: 1, bill_date: Date(), bill_type: "Mobile",totalBillAmount: 88.90, m_name: "Google", p_name: "Pixel", m_num: "6781234567", gb_use: 50.9, min_use: 30.7)
+        
+        var bill_2  = Mobile(bill_id: 2, bill_date: Date(), bill_type: "Mobile",totalBillAmount: 98.90, m_name: "Sony", p_name: "E2", m_num: "4571234567", gb_use: 60.9, min_use: 70.7)
+        var bill_3  = Mobile(bill_id: 1, bill_date: Date(), bill_type: "Mobile", totalBillAmount: 100.08,m_name: "Google", p_name: "Pixel", m_num: "6981230067", gb_use: 30.9, min_use: 15.7)
+        
+        var bill_4 = Internet(bill_id: 4, bill_date: Date(), bill_type: "Internet",totalBillAmount: 38.70, p_name: "BSNL", i_gb_used: 55.67)
+        var bill_5 = Internet(bill_id: 5, bill_date: Date(), bill_type: "Internet",totalBillAmount: 45.99, p_name: "Tata", i_gb_used: 39.67)
+        
+        var bill_6 = Hydro(bill_id: 6, bill_date: Date(), bill_type: "Hydro", totalBillAmount: 76.09,a_name: "Gig Tech", u_consume: 77)
+        var bill_7 = Hydro(bill_id: 7, bill_date: Date(), bill_type: "Hydro",totalBillAmount: 234.66, a_name: "Info Tech", u_consume: 97)
+        
+        // creating customers
+        
+        var customer_1 = Customer(customerId: 1, firstName: "Vishal", lastName: "Pabbi", email: "vishal@gmail.com",ph_num: "6893451234")
+        
+        
+        var customer_2 = Customer(customerId: 2, firstName: "Diksha", lastName: "Sharma", email: "diksha@gmail.com",ph_num: "6893498234")
+        
+        
+        var customer_3 =  Customer(customerId: 3, firstName: "Ankita", lastName: "Pabbi", email: "apabbi@gmail.com",ph_num: "6453451234")
+        
     }
     
 
