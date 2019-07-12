@@ -13,6 +13,7 @@ class BillLayoutTableViewCell: UITableViewCell {
     
     
     
+    @IBOutlet weak var lblGBUsed: UILabel!
     @IBOutlet weak var lblBillAmount: UILabel!
     @IBOutlet weak var lblBillType: UILabel!
     override func awakeFromNib() {

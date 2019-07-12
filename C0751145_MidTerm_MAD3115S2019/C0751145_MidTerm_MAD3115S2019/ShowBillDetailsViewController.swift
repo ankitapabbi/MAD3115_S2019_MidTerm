@@ -57,6 +57,7 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         
         cell.lblBillType.text = "Bill Type : \(cust!.bill_type)"
         cell.lblBillAmount.text = "Ammount : \(cust!.bill_total)"
+       cell.lblGBUsed.text = "Bill ID : \(cust!.bill_id)"
         
         
         
