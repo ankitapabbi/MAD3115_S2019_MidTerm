@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
     
@@ -56,7 +57,7 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         let cust = Customer.existig_Customer.bill_Dictionary[indexPath.row]
         
         cell.lblBillType.text = "Bill Type : \(cust!.bill_type)"
-        cell.lblBillAmount.text = "Ammount : \(cust!.bill_total)"
+        cell.lblBillAmount.text = "Ammount : $\(cust!.bill_total)"
        cell.lblGBUsed.text = "Bill ID : \(cust!.bill_id)"
         
         

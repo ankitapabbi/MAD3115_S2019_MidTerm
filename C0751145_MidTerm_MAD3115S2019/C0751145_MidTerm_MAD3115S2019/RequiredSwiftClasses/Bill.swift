@@ -12,7 +12,7 @@ enum Bill_Type {
 }
 
 class Bill {
-    var bill_id: Int?
+    var bill_id: Int
     var bill_date: Date
     var bill_type: String
     var bill_total: Float
