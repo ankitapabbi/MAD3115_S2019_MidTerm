@@ -11,6 +11,7 @@ import UIKit
 class ShowBillDetailsViewController: UIViewController {
 
     
+   var indexOfCustomer: Int?
     @IBOutlet weak var lblCustomerId: UILabel!
     
     @IBOutlet weak var lblCustomerPhone: UILabel!
@@ -23,9 +24,16 @@ class ShowBillDetailsViewController: UIViewController {
     
     @IBOutlet weak var tblBills: UITableView!
     
+    @IBOutlet weak var btnBackToCustomerList: UIBarButtonItem!
+    @IBAction func btnAddNewBill(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.lblCustomerId.text = String(Customer.existig_Customer.customerId)
+         self.lblCustomerName.text = Customer.existig_Customer.fullName
+        self.lblCustomerEmail.text = Customer.existig_Customer.email
+       self.lblCustomerPhone.text = Customer.existig_Customer.phone
+        self.lblCustomerTotal.text = String(Customer.existig_Customer.TotalAmount)
         // Do any additional setup after loading the view.
     }
     

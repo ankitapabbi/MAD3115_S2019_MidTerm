@@ -65,7 +65,15 @@ class BillListTableViewController: UIViewController,UITableViewDelegate,UITableV
     }
 
     @objc func tapToGoOnCustomerDetail(_ sender: UITapGestureRecognizer) {
-        print(sender.view!.tag)// to display index 
+        print(sender.view!.tag)// to display index
+       // let sb = UIStoryboard(name: "Main", bundle: nil)
+        //let cust = sb.instantiateViewController(withIdentifier: "customerDetail") as! ShowBillDetailsViewController
+      
+        
+        //self.navigationController?.pushViewController(cust,animated: true)
+        // to get perticular index
+         Customer.existig_Customer = self.customer_array[(sender.view?.tag)!]
+        self.performSegue(withIdentifier: "furtherDetails", sender: nil)
        
     }
     
