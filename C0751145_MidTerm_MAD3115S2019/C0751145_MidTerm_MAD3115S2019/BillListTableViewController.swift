@@ -34,11 +34,20 @@ class BillListTableViewController: UIViewController,UITableViewDelegate,UITableV
         
         var customer_1 = Customer(customerId: 1, firstName: "Vishal", lastName: "Pabbi", email: "vishal@gmail.com",ph_num: "6893451234")
         
+        customer_1.bill_Dictionary[0] = bill_1
+         customer_1.bill_Dictionary[1] = bill_2
+        customer_1.bill_Dictionary[2] = bill_3
+        
         
         var customer_2 = Customer(customerId: 2, firstName: "Diksha", lastName: "Sharma", email: "diksha@gmail.com",ph_num: "6893498234")
-        
+         customer_2.bill_Dictionary[0] = bill_4
+        customer_2.bill_Dictionary[1] = bill_5
         
         var customer_3 =  Customer(customerId: 3, firstName: "Ankita", lastName: "Pabbi", email: "apabbi@gmail.com",ph_num: "6453451234")
+         customer_3.bill_Dictionary[0] = bill_6
+         customer_3.bill_Dictionary[1] = bill_4
+         customer_3.bill_Dictionary[2] = bill_2
+         customer_3.bill_Dictionary[3] = bill_7
         
         
         // adding customers in its array

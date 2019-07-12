@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ShowBillDetailsViewController: UIViewController {
+class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+  
+    
 
     
-   var indexOfCustomer: Int?
     @IBOutlet weak var lblCustomerId: UILabel!
     
     @IBOutlet weak var lblCustomerPhone: UILabel!
@@ -24,7 +25,10 @@ class ShowBillDetailsViewController: UIViewController {
     
     @IBOutlet weak var tblBills: UITableView!
     
-    @IBOutlet weak var btnBackToCustomerList: UIBarButtonItem!
+ 
+    @IBAction func btnBack(_ sender: Any) {
+        
+    }
     @IBAction func btnAddNewBill(_ sender: Any) {
     }
     override func viewDidLoad() {
@@ -33,10 +37,25 @@ class ShowBillDetailsViewController: UIViewController {
          self.lblCustomerName.text = Customer.existig_Customer.fullName
         self.lblCustomerEmail.text = Customer.existig_Customer.email
        self.lblCustomerPhone.text = Customer.existig_Customer.phone
-        self.lblCustomerTotal.text = String(Customer.existig_Customer.TotalAmount)
+        self.lblCustomerTotal.text = String(Customer.existig_Customer.TotalAmountPayable)
+        
+        self.tblBills.delegate = self
+        self.tblBills.dataSource = self
         // Do any additional setup after loading the view.
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Customer.existig_Customer.bill_Dictionary.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "billCell") as! UITableViewCell
+        
+      cell.textLabel?.text = Customer.existig_Customer.bill_Dictionary[indexPath.row]?.bill_type
+      
+        return cell
+    }
 
     /*
     // MARK: - Navigation
@@ -48,4 +67,5 @@ class ShowBillDetailsViewController: UIViewController {
     }
     */
 
+    
 }

@@ -25,7 +25,7 @@ class Customer
     var bill_Dictionary = [Int:Bill]()
     
     // computed value
-    var TotalAmount: Float
+    var TotalAmountPayable: Float
     {
         var TotalAmount: Float = 0.0
         
