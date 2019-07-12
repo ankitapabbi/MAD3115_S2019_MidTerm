@@ -49,9 +49,22 @@ class BillListTableViewController: UIViewController,UITableViewDelegate,UITableV
          customer_3.bill_Dictionary[2] = bill_2
          customer_3.bill_Dictionary[3] = bill_7
         
+        var customer_4 =  Customer(customerId: 4, firstName: "Netra", lastName: "Sharma", email: "anetra@gmail.com",ph_num: "6453458834")
+        customer_4.bill_Dictionary[0] = bill_6
+        customer_4.bill_Dictionary[1] = bill_1
+        customer_4.bill_Dictionary[2] = bill_2
+       
+        
+        var customer_5 =  Customer(customerId: 4, firstName: "Netra", lastName: "Sharma", email: "anetra@gmail.com",ph_num: "6453458834")
+        customer_5.bill_Dictionary[0] = bill_6
+        customer_5.bill_Dictionary[1] = bill_7
+        customer_5.bill_Dictionary[2] = bill_2
+        customer_5.bill_Dictionary[3] = bill_4
+        customer_5.bill_Dictionary[4] = bill_2
+        customer_5.bill_Dictionary[5] = bill_5
         
         // adding customers in its array
-        self.customer_array = [customer_1, customer_2, customer_3]
+        self.customer_array = [customer_1, customer_2, customer_3,customer_4,customer_5]
         self.tblCustomerList.delegate = self
         self.tblCustomerList.dataSource = self
         
