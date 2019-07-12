@@ -38,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login Here !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8c-kN-5g5">
                                 <rect key="frame" x="144" y="149" width="130" height="30"/>
@@ -85,7 +85,7 @@
                         <outlet property="switchRememberMe" destination="XBr-25-IBX" id="yxd-5T-0Aj"/>
                         <outlet property="txtUserEmail" destination="09q-xq-Uef" id="lEg-7o-b7R"/>
                         <outlet property="txtUserPassword" destination="51J-vy-zVP" id="dEJ-h1-J69"/>
-                        <segue destination="bZ1-Tx-y9L" kind="presentation" identifier="userProfile" id="0lp-rp-v2T"/>
+                        <segue destination="Odr-ly-rFE" kind="presentation" identifier="userProfile" id="0lp-rp-v2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,10 +102,36 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dbP-yW-xPC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1jm-5i-727">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="bDp-oU-us1">
+                            <connections>
+                                <segue destination="k6M-o1-eoz" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboard:" id="m9G-Ed-HSa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvz-Yc-UL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="k6M-o1-eoz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="777" y="21"/>
+            <point key="canvasLocation" x="1686.9565217391305" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Yp-Qv-00m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Odr-ly-rFE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Va4-AV-8Dz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bZ1-Tx-y9L" kind="relationship" relationship="rootViewController" id="9zy-6g-Tmp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0WX-Yr-uDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.81159420289862" y="20.758928571428569"/>
         </scene>
     </scenes>
     <resources>

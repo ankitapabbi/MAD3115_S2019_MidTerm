@@ -10,6 +10,8 @@ import UIKit
 
 class BillListTableViewController: UIViewController {
 
+    @IBAction func btnLogout(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -88,6 +88,15 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func unWindLogoutFromAnyScreen(storyboard : UIStoryboardSegue){
+        print("Logout")
+        // picking value from sencond screen and displaying on first screen while logout
+        let s = storyboard.source as! BillListTableViewController
+        txtUserEmail.text = ""
+        txtUserPassword.text = ""
+        
+    }
 
 
 }
