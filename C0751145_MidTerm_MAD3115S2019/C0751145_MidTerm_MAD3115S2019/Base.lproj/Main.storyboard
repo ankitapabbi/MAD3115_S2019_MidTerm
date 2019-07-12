@@ -432,8 +432,7 @@
         <image name="loginLogo" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qbw-sa-yE4"/>
-        <segue reference="m3n-6Q-1pP"/>
+        <segue reference="GS6-Tf-AeD"/>
         <segue reference="5BW-Bl-Vey"/>
     </inferredMetricsTieBreakers>
 </document>

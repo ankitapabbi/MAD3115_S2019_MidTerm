@@ -45,6 +45,7 @@ class AddNewBillViewController: UIViewController {
         }
         else if self.segmentBillType.selectedSegmentIndex == 2{
              print("Mobile")
+            
         }
     }
     
