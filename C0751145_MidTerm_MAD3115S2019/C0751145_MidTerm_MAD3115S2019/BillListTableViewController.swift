@@ -8,8 +8,13 @@
 
 import UIKit
 
-class BillListTableViewController: UIViewController {
+class BillListTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+   
 
+    
+    @IBOutlet weak var tblCustomerList: UITableView!
+    var customer_array = Array<Customer>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +40,26 @@ class BillListTableViewController: UIViewController {
         
         var customer_3 =  Customer(customerId: 3, firstName: "Ankita", lastName: "Pabbi", email: "apabbi@gmail.com",ph_num: "6453451234")
         
+        
+        // adding customers in its array
+        self.customer_array = [customer_1, customer_2, customer_3]
+        self.tblCustomerList.delegate = self
+        self.tblCustomerList.dataSource = self
+        
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customer_array.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "customerCell") as! UITableViewCell
+        cell.textLabel?.text = self.customer_array[indexPath.row].fullName
+        
+        return cell
+    }
+    
     
 
     /*
