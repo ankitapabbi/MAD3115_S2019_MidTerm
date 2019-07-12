@@ -20,23 +20,32 @@ class LoginViewController: UIViewController {
         var email = self.txtUserEmail.text!
         var password = self.txtUserPassword.text!
         
-        let pList = Bundle.main.path(forResource: "UsersList", ofType: "plist")
+        let pList = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
         if let dict = NSDictionary(contentsOfFile: pList!)
         {
              if let users = dict["Users"] as? [[String:Any]] {
                 for user in users {
-                    let userEmail = user["userEmail"] as! String
-                    let userPassword = user["userPassword"] as! String
+//                    let userEmail = user["userEmail"] as! String
+//                    let userPassword = user["userPassword"] as! String
                     
-                    if email == userEmail as! String  {
-                        
-                        if password == userPassword as String{
+                    if email ==  user["userEmail"] as! String {
+                        if password == user["userPassword"] as! String{
                             
                         }
+                        
+                    }
+                    else{
+                        let alert = UIAlertController(title: "Error", message: "User Email / Password Incorrect", preferredStyle: UIAlertController.Style.alert)
+                        
+                        let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                        let actionCanel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+                        alert.addAction(actionOk)
+                        alert.addAction(actionCanel)
+                        self .present(alert, animated: true ,completion: nil)
                     }
                     
                 }
-            }
+             }
             
         }
     }
