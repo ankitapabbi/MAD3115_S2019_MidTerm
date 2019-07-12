@@ -17,10 +17,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtUserPassword: UITextField!
   
     @IBOutlet weak var switchRememberMe: UISwitch!
+    
     @IBAction func btnLogin(_ sender: UIButton) {
         
         var email = self.txtUserEmail.text!
         var password = self.txtUserPassword.text!
+         let userDefault = UserDefaults.standard
         
         if let plist = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
         {
@@ -32,12 +34,21 @@ class LoginViewController: UIViewController {
                     {
                         if ( (email == (user["userEmail"] as! String)) && (password == (user["password"] as! String)) ){
                             
-                           print("Hello")
-                            
-                            let sb = UIStoryboard(name: "Main", bundle: nil)
-                            let profile = sb.instantiateViewController(withIdentifier: "userProfile") as! BillListTableViewController
-                            self.navigationController?.pushViewController(profile,animated: true)
+                          
+                            if self.switchRememberMe.isOn
+                            {
+                                userDefault.setValue(self.txtUserEmail.text, forKey: "userEmail")
+                                userDefault.set(self.txtUserPassword.text, forKey: "userPassword")
+                            }
+                            else
+                            {
+                                userDefault.removeObject(forKey: "userEmail")
+                                userDefault.removeObject(forKey: "userPassword")
+                            }
+                            self.performSegue(withIdentifier: "userProfile", sender: nil)
                             loggedIn = true
+                            
+                           
                            
                         }
                     }
@@ -60,7 +71,22 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+             getRememberMeValues()
        
+    }
+    private func getRememberMeValues()
+    {
+        let userDefault = UserDefaults.standard
+        
+        if let email = userDefault.string(forKey: "userEmail")
+        {
+            txtUserEmail.text = email
+            
+            if let pwd = userDefault.string(forKey: "userPassword")
+            {
+                txtUserPassword.text = pwd
+            }
+        }
     }
 
 
