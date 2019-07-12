@@ -69,7 +69,9 @@ class ShowBillDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100)
+    }
     /*
     // MARK: - Navigation
 
