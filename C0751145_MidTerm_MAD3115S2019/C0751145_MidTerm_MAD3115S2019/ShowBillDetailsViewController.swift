@@ -10,6 +10,19 @@ import UIKit
 
 class ShowBillDetailsViewController: UIViewController {
 
+    
+    @IBOutlet weak var lblCustomerId: UILabel!
+    
+    @IBOutlet weak var lblCustomerPhone: UILabel!
+    @IBOutlet weak var lblCustomerEmail: UILabel!
+    
+    @IBOutlet weak var lblCustomerName: UILabel!
+    
+    @IBOutlet weak var lblCustomerTotal: UILabel!
+    
+    
+    @IBOutlet weak var tblBills: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
